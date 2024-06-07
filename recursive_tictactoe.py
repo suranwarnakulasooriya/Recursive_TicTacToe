@@ -18,7 +18,7 @@ parser.add_argument('-s','--size',type=int,default=800,help='screen size in pize
 args = parser.parse_args() # get args
 depth = max(1,args.depth) # number of levels of recursion (1 = normal game)
 autoplay = args.autoplay # if the game plays itself
-target_sidelength = args.size # target sidelength of screen in pixels
+target_sidelength = max(100,args.size) # target sidelength of screen in pixels
 
 # closest integer to target_sidelength divisible by 3^depth so every cell has an integer sidelength
 sl = (target_sidelength//(3**depth))*(3**depth) 
