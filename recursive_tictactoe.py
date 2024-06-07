@@ -36,7 +36,6 @@ path = [] # inititial path that the move has to match ([] means any path)
 
 class board:
     def __init__(self,depth,path=[],parent=None):
-        self.depth = depth
         self.is_deepest = not depth-1 # if this board has a depth of 1 (no child boards)
         self.is_solved = False; self.state = 0 # starts unsolved (0)
         self.substates = [0]*9 # states of children
