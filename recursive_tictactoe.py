@@ -42,15 +42,7 @@ class board:
         self.path = path # list of indices within parent boards to get to this board
 
         if not self.is_deepest: # create child boards, add indices to each child's path
-            self.children = [board(depth-1,self.path+[0],self),
-                             board(depth-1,self.path+[1],self),
-                             board(depth-1,self.path+[2],self),
-                             board(depth-1,self.path+[3],self),
-                             board(depth-1,self.path+[4],self),
-                             board(depth-1,self.path+[5],self),
-                             board(depth-1,self.path+[6],self),
-                             board(depth-1,self.path+[7],self),
-                             board(depth-1,self.path+[8],self)]
+            self.children = [board(depth-1,self.path+[i],self) for i in range(9)]
         else: self.children = self.substates # if this board is the deepest, its children are cells
 
         unsolved_boards.append(self.path) # add path to unsolved_boards
