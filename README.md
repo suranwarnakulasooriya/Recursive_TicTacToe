@@ -11,7 +11,7 @@ pip install pygame
 All of the following arguments are optional:
 |Alias|Name|Description|Default|Range|
 |------------|----|-----------|-------|-----|
-|-d|--depth|game recursion depth|7|at least 1, be caucious of going over 5|
+|-d|--depth|game recursion depth|7|at least 1, be cautious of going over 5|
 |-a|--autoplay|have the game play itself|off|
 |-s|--size|screen side length in pixels|800|min 100|
 
